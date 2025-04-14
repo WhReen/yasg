@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="PickupMagnet" load_steps=4 format=3 uid="uid://dj6dhqc8obmor"]
+
+[ext_resource type="Texture2D" uid="uid://cwbq12wc58urq" path="res://assets/signalreciever.svg" id="1_rv0fs"]
+[ext_resource type="Script" uid="uid://daemxsh780ijr" path="res://resources/pickup/Vaccum.gd" id="2_ivu5k"]
+[ext_resource type="AudioStream" uid="uid://c17rhs55gnbw8" path="res://assets/magnet.wav" id="3_ivu5k"]
+
+[resource]
+script = ExtResource("2_ivu5k")
+title = "Magnet"
+icon = ExtResource("1_rv0fs")
+rescale = Vector2(0, 0)
+description = "Get all xp that dropped"
+sound = ExtResource("3_ivu5k")
+pitchRandom = false
+weight = 1.0
+metadata/_custom_type_script = "uid://daemxsh780ijr"

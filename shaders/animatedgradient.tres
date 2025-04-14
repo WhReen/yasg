@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://1gpmlrm5skcw"]
+
+[ext_resource type="Shader" uid="uid://jhesq6e35wiq" path="res://shaders/animatedgradient.gdshader" id="1_gpwxf"]
+
+[resource]
+shader = ExtResource("1_gpwxf")
+shader_parameter/BLOOM_THRESHOLD = 0.7
+shader_parameter/BLOOM_INTENSITY = 3.0
+shader_parameter/BLUR_ITERATIONS = 3
+shader_parameter/BLUR_SIZE = 0.03
+shader_parameter/BLUR_SUBDIVISIONS = 32

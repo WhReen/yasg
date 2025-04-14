@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://k23653dux0r7"]
+
+[ext_resource type="Script" uid="uid://8b50xovumky6" path="res://scripts/PickupResource.gd" id="1_50ffb"]
+[ext_resource type="Texture2D" uid="uid://2nmft44kfvxu" path="res://assets/poo.svg" id="2_c40t3"]
+[ext_resource type="Resource" uid="uid://cp5hch103w620" path="res://resources/pickup/smallxp.tres" id="2_k3o02"]
+[ext_resource type="Script" uid="uid://dml04y8lmcrfq" path="res://scripts/EnemyType.gd" id="3_kjykd"]
+
+[resource]
+script = ExtResource("3_kjykd")
+title = "Poo"
+texture = ExtResource("2_c40t3")
+health = 6.0
+damage = 8.0
+drops = Array[ExtResource("1_50ffb")]([ExtResource("2_k3o02")])
+metadata/_custom_type_script = "uid://dml04y8lmcrfq"

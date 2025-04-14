@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="Lightning" load_steps=13 format=3 uid="uid://cqewwu71vag6n"]
+
+[ext_resource type="Texture2D" uid="uid://dwtwaix2fqlai" path="res://assets/thunder.svg" id="1_7p304"]
+[ext_resource type="PackedScene" uid="uid://chlynv2aotua6" path="res://scenes/projectile.tscn" id="2_706hg"]
+[ext_resource type="Script" uid="uid://moxcpiqm002q" path="res://Lightning.gd" id="3_cx3c1"]
+[ext_resource type="AudioStream" uid="uid://rtxpdp0pvt36" path="res://assets/lightning.wav" id="4_7p304"]
+[ext_resource type="Texture2D" uid="uid://cijkdihh5d782" path="res://assets/thunder.png" id="4_srqjy"]
+[ext_resource type="Script" uid="uid://0uoe6tj50dkr" path="res://scripts/Upgrade.gd" id="5_ed0al"]
+[ext_resource type="Script" uid="uid://djsp2ew88twtl" path="res://scripts/LightningUpgrade.gd" id="7_cx3c1"]
+
+[sub_resource type="Resource" id="Resource_srqjy"]
+script = ExtResource("7_cx3c1")
+amount = 3
+damage = 0.0
+cooldown = 0.0
+description = "Add amount"
+metadata/_custom_type_script = "uid://djsp2ew88twtl"
+
+[sub_resource type="Resource" id="Resource_ed0al"]
+script = ExtResource("7_cx3c1")
+amount = 0
+damage = 5.0
+cooldown = 0.0
+description = "Add damage"
+metadata/_custom_type_script = "uid://djsp2ew88twtl"
+
+[sub_resource type="Resource" id="Resource_ouy4j"]
+script = ExtResource("7_cx3c1")
+amount = 4
+damage = 0.0
+cooldown = 0.0
+description = "Add more amount"
+metadata/_custom_type_script = "uid://djsp2ew88twtl"
+
+[sub_resource type="Resource" id="Resource_8fsts"]
+script = ExtResource("7_cx3c1")
+amount = 0
+damage = 0.0
+cooldown = -1.5
+description = "Reduce Cooldown"
+metadata/_custom_type_script = "uid://djsp2ew88twtl"
+
+[sub_resource type="Resource" id="Resource_2526q"]
+script = ExtResource("7_cx3c1")
+amount = 3
+damage = 3.0
+cooldown = -1.5
+description = "Holy Thunder!"
+metadata/_custom_type_script = "uid://djsp2ew88twtl"
+
+[resource]
+script = ExtResource("3_cx3c1")
+amount = 5
+damage = 2.0
+cooldown = 4.0
+speed = 0.0
+projectile_node = ExtResource("2_706hg")
+upgrades = Array[ExtResource("5_ed0al")]([SubResource("Resource_srqjy"), SubResource("Resource_ed0al"), SubResource("Resource_ouy4j"), SubResource("Resource_8fsts"), SubResource("Resource_2526q")])
+sound = ExtResource("4_7p304")
+pitchRandom = true
+title = "Thunder"
+texture = ExtResource("4_srqjy")
+icon = ExtResource("1_7p304")
+metadata/_custom_type_script = "uid://moxcpiqm002q"

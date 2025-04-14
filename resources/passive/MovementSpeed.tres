@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://b4hcu04mkv6uu"]
+
+[ext_resource type="Script" uid="uid://cv2bxxblpdgkw" path="res://scripts/PassiveItem.gd" id="1_addr5"]
+[ext_resource type="Texture2D" uid="uid://b83t1i0bfl0eo" path="res://assets/runshoe.svg" id="2_uwom6"]
+[ext_resource type="Script" uid="uid://cau45jdiwfmt4" path="res://scripts/Stats.gd" id="3_0hpu2"]
+
+[sub_resource type="Resource" id="Resource_71idj"]
+script = ExtResource("3_0hpu2")
+description = "Increase movement speed a bit"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 50.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cau45jdiwfmt4"
+
+[sub_resource type="Resource" id="Resource_yka2c"]
+script = ExtResource("3_0hpu2")
+description = "Increase movement speed"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 100.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cau45jdiwfmt4"
+
+[sub_resource type="Resource" id="Resource_m5ktd"]
+script = ExtResource("3_0hpu2")
+description = "Why are you running?"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 150.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cau45jdiwfmt4"
+
+[resource]
+script = ExtResource("1_addr5")
+upgrades = Array[ExtResource("3_0hpu2")]([SubResource("Resource_71idj"), SubResource("Resource_yka2c"), SubResource("Resource_m5ktd")])
+title = "Movement Speed"
+texture = ExtResource("2_uwom6")
+metadata/_custom_type_script = "uid://cv2bxxblpdgkw"

@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="SingleShot" load_steps=13 format=3 uid="uid://cjcn8rpla1x0c"]
+
+[ext_resource type="PackedScene" uid="uid://chlynv2aotua6" path="res://scenes/projectile.tscn" id="1_1jalw"]
+[ext_resource type="Resource" uid="uid://drs3t8nkxkpx7" path="res://resources/weapon/Coinballs.tres" id="1_4fvhq"]
+[ext_resource type="Script" uid="uid://rky1p726uq32" path="res://scripts/SingleShot.gd" id="2_1yiw8"]
+[ext_resource type="Texture2D" uid="uid://jowbxxe7pka" path="res://assets/fire.svg" id="3_h82om"]
+[ext_resource type="AudioStream" uid="uid://dncy8e305jgc3" path="res://assets/fireballsfx.wav" id="4_ssspa"]
+[ext_resource type="Script" uid="uid://0uoe6tj50dkr" path="res://scripts/Upgrade.gd" id="5_ssspa"]
+[ext_resource type="Script" uid="uid://cypoyhxochxie" path="res://scripts/ProjectileUpgrade.gd" id="6_f4vkn"]
+
+[sub_resource type="Resource" id="Resource_ssspa"]
+script = ExtResource("6_f4vkn")
+speed = 0.0
+damage = 1.0
+cooldown = 0.0
+description = "Increase damage"
+metadata/_custom_type_script = "uid://cypoyhxochxie"
+
+[sub_resource type="Resource" id="Resource_f4vkn"]
+script = ExtResource("6_f4vkn")
+speed = 0.0
+damage = 0.0
+cooldown = -0.1
+description = "Reduce Cooldown"
+metadata/_custom_type_script = "uid://cypoyhxochxie"
+
+[sub_resource type="Resource" id="Resource_2ce2t"]
+script = ExtResource("6_f4vkn")
+speed = 0.0
+damage = 2.0
+cooldown = 0.0
+description = "Increase more damage"
+metadata/_custom_type_script = "uid://cypoyhxochxie"
+
+[sub_resource type="Resource" id="Resource_iu767"]
+script = ExtResource("6_f4vkn")
+speed = 200.0
+damage = 0.0
+cooldown = -0.125
+description = "Reduce Cooldown and Increase Speed"
+metadata/_custom_type_script = "uid://cypoyhxochxie"
+
+[sub_resource type="Resource" id="Resource_sftum"]
+script = ExtResource("6_f4vkn")
+speed = 200.0
+damage = 2.0
+cooldown = -0.1
+description = "The Fireball be ballin"
+metadata/_custom_type_script = "uid://cypoyhxochxie"
+
+[resource]
+script = ExtResource("2_1yiw8")
+damage = 1.0
+cooldown = 0.5
+speed = 400.0
+projectile_node = ExtResource("1_1jalw")
+upgrades = Array[ExtResource("5_ssspa")]([SubResource("Resource_ssspa"), SubResource("Resource_f4vkn"), SubResource("Resource_2ce2t"), SubResource("Resource_iu767"), SubResource("Resource_sftum")])
+evolution = ExtResource("1_4fvhq")
+sound = ExtResource("4_ssspa")
+pitchRandom = true
+title = "Fireball"
+texture = ExtResource("3_h82om")
+icon = ExtResource("3_h82om")
+metadata/_custom_type_script = "uid://rky1p726uq32"

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dv1y5ljnjihp2"]
+
+[ext_resource type="PackedScene" uid="uid://by0q08n38jtn4" path="res://scenes/spawner.tscn" id="1_ia1lp"]
+[ext_resource type="Texture2D" uid="uid://bu00rfsn6hmpo" path="res://assets/shaded square full.png" id="1_sasra"]
+[ext_resource type="PackedScene" uid="uid://d12aa4jpjrwif" path="res://scenes/player.tscn" id="1_uhqqe"]
+[ext_resource type="PackedScene" uid="uid://byi40slbehgs4" path="res://scenes/destructible.tscn" id="4_7ddre"]
+
+[node name="TestScene" type="Node2D"]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0, 0, 0, 0.462745)
+energy = 0.51
+blend_mode = 2
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+repeat_size = Vector2(1177.25, 1177.25)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(589, 589)
+scale = Vector2(1.17725, 1.17725)
+texture = ExtResource("1_sasra")
+
+[node name="Spawner" parent="." node_paths=PackedStringArray("player") instance=ExtResource("1_ia1lp")]
+player = NodePath("../Player")
+
+[node name="Player" parent="." instance=ExtResource("1_uhqqe")]
+position = Vector2(592, 315)
+
+[node name="Destructible" parent="." instance=ExtResource("4_7ddre")]
+position = Vector2(269, 406)

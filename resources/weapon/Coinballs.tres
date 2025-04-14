@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="SingleShot" load_steps=5 format=3 uid="uid://drs3t8nkxkpx7"]
+
+[ext_resource type="PackedScene" uid="uid://chlynv2aotua6" path="res://scenes/projectile.tscn" id="1_gcaga"]
+[ext_resource type="Script" uid="uid://rky1p726uq32" path="res://scripts/SingleShot.gd" id="2_ejjhx"]
+[ext_resource type="Texture2D" uid="uid://caqsd5e8yqqec" path="res://assets/coin.svg" id="3_vp7rh"]
+[ext_resource type="Script" uid="uid://0uoe6tj50dkr" path="res://scripts/Upgrade.gd" id="4_ah6r3"]
+
+[resource]
+script = ExtResource("2_ejjhx")
+damage = 10.0
+cooldown = 0.01
+speed = 200.0
+projectile_node = ExtResource("1_gcaga")
+upgrades = Array[ExtResource("4_ah6r3")]([])
+pitchRandom = false
+title = "Coinball real"
+texture = ExtResource("3_vp7rh")
+icon = ExtResource("3_vp7rh")
+metadata/_custom_type_script = "uid://rky1p726uq32"

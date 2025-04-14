@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckvotfm2y72b5"]
+
+[ext_resource type="Script" uid="uid://bwny074wt4r24" path="res://scripts/upgrade_button.gd" id="1_ki6hb"]
+[ext_resource type="PackedScene" uid="uid://dj4jdnekihoyl" path="res://scenes/upgrade_line.tscn" id="2_ew51g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ew51g"]
+bg_color = Color(0.192157, 0.192157, 0.192157, 0.501961)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ki6hb"]
+bg_color = Color(1, 0.910964, 0.51261, 0.486275)
+
+[node name="Upgrade" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+toggle_mode = true
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("1_ki6hb")
+
+[node name="Line2D" parent="." instance=ExtResource("2_ew51g")]
+show_behind_parent = true
+points = PackedVector2Array(0, 0, 31, -28)
+default_color = Color(0, 0, 0, 0.345098)
+
+[node name="Panel" type="Panel" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_ew51g")
+
+[node name="ColorRect" type="ColorRect" parent="Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0.76662, 0.76662, 0.76662, 0.501961)
+
+[node name="Label" type="Label" parent="."]
+visible = false
+z_index = 1
+layout_mode = 1
+offset_left = 16.0
+offset_top = -33.0
+offset_right = 119.0
+offset_bottom = -10.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ki6hb")
+text = "Lorem Ipsum
+
+Dolor sit amet"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="mouse_entered" from="Panel" to="." method="_on_panel_mouse_entered"]
+[connection signal="mouse_exited" from="Panel" to="." method="_on_panel_mouse_exited"]

@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://bpp5qj17g5tjh"]
+
+[ext_resource type="Script" uid="uid://cv2bxxblpdgkw" path="res://scripts/PassiveItem.gd" id="1_6lota"]
+[ext_resource type="Texture2D" uid="uid://cg8rqbt8k1ds4" path="res://assets/targetRange.svg" id="2_7e3lb"]
+[ext_resource type="Script" uid="uid://cau45jdiwfmt4" path="res://scripts/Stats.gd" id="3_t6ef1"]
+
+[sub_resource type="Resource" id="Resource_h2qfk"]
+script = ExtResource("3_t6ef1")
+description = "Attack a bit farther"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 50.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cau45jdiwfmt4"
+
+[sub_resource type="Resource" id="Resource_2n83r"]
+script = ExtResource("3_t6ef1")
+description = "Attack way farther"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 100.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cau45jdiwfmt4"
+
+[sub_resource type="Resource" id="Resource_hoesx"]
+script = ExtResource("3_t6ef1")
+description = "Attack far far away!"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 200.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://cau45jdiwfmt4"
+
+[resource]
+script = ExtResource("1_6lota")
+upgrades = Array[ExtResource("3_t6ef1")]([SubResource("Resource_h2qfk"), SubResource("Resource_2n83r"), SubResource("Resource_hoesx")])
+title = "Attack Range"
+texture = ExtResource("2_7e3lb")
+metadata/_custom_type_script = "uid://cv2bxxblpdgkw"

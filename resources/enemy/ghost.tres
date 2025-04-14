@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://4ahbl0d6jiac"]
+
+[ext_resource type="Script" uid="uid://8b50xovumky6" path="res://scripts/PickupResource.gd" id="1_ldhf7"]
+[ext_resource type="Resource" uid="uid://cp5hch103w620" path="res://resources/pickup/smallxp.tres" id="2_mdkot"]
+[ext_resource type="Texture2D" uid="uid://d381yjftq1007" path="res://assets/ghost.svg" id="2_pe0u7"]
+[ext_resource type="Script" uid="uid://dml04y8lmcrfq" path="res://scripts/EnemyType.gd" id="3_k2lap"]
+
+[resource]
+script = ExtResource("3_k2lap")
+title = "Ghost"
+texture = ExtResource("2_pe0u7")
+health = 3.0
+damage = 5.0
+drops = Array[ExtResource("1_ldhf7")]([ExtResource("2_mdkot")])
+metadata/_custom_type_script = "uid://dml04y8lmcrfq"

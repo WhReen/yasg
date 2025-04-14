@@ -1,0 +1,564 @@
+[gd_scene load_steps=37 format=3 uid="uid://d12aa4jpjrwif"]
+
+[ext_resource type="Script" uid="uid://csfdr5ff28yfl" path="res://scripts/player.gd" id="1_onrkg"]
+[ext_resource type="AudioStream" uid="uid://c01l06kbn5rin" path="res://assets/hurt.wav" id="2_4r5pv"]
+[ext_resource type="Texture2D" uid="uid://caqsd5e8yqqec" path="res://assets/coin.svg" id="2_a8ls1"]
+[ext_resource type="Texture2D" uid="uid://op30qnyxpp2u" path="res://assets/xpbarbackgroundplaceholder.png" id="2_fjrip"]
+[ext_resource type="PackedScene" uid="uid://dmrkhoqs3ia2p" path="res://scenes/slot.tscn" id="2_hqtel"]
+[ext_resource type="Texture2D" uid="uid://bu71hj2fik4ql" path="res://assets/xpbarborderplaceholder.png" id="3_smehm"]
+[ext_resource type="Resource" uid="uid://cjcn8rpla1x0c" path="res://resources/weapon/Fireball.tres" id="3_sweqy"]
+[ext_resource type="Texture2D" uid="uid://ccwfp1btidpau" path="res://assets/xpbarplaceholder.png" id="4_ur7pv"]
+[ext_resource type="Texture2D" uid="uid://bto5bsoh7o0i2" path="res://assets/sparkle.svg" id="5_y4r1p"]
+[ext_resource type="Texture2D" uid="uid://d1yq3aspfn2gq" path="res://assets/border1.svg" id="6_d2wvv"]
+[ext_resource type="Script" uid="uid://cw6j5h0mn7cmn" path="res://scripts/options.gd" id="7_smehm"]
+[ext_resource type="PackedScene" uid="uid://k52qid8qwaj1" path="res://scenes/passive_slot.tscn" id="9_d2wvv"]
+[ext_resource type="Texture2D" uid="uid://cb702pifmw0x8" path="res://assets/smiley.svg" id="11_d2wvv"]
+[ext_resource type="Texture2D" uid="uid://dre1ts4pybpaf" path="res://assets/border1.png" id="11_jej6c"]
+[ext_resource type="Texture2D" uid="uid://bvyppm7bhk7fo" path="res://assets/box.png" id="12_jej6c"]
+[ext_resource type="Script" uid="uid://5c8lxoa02ks1" path="res://scripts/chest.gd" id="12_oprun"]
+[ext_resource type="Texture2D" uid="uid://b2dgpgfyykv4r" path="res://assets/explosion.png" id="14_a8ls1"]
+[ext_resource type="AudioStream" uid="uid://c7l87x0kla7us" path="res://assets/Bouquet.mp3" id="17_fulsm"]
+[ext_resource type="Script" uid="uid://dvi7oiur8itp5" path="res://scripts/to_main_menu.gd" id="18_4r5pv"]
+
+[sub_resource type="Curve" id="Curve_3v2ag"]
+_limits = [-360.0, 360.0, 0.0, 1.0]
+_data = [Vector2(0.00829875, -20.2247), 0.0, 0.0, 0, 0, Vector2(1, -4.04492), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_jej6c"]
+curve = SubResource("Curve_3v2ag")
+
+[sub_resource type="Curve" id="Curve_qfm1y"]
+_limits = [-200.0, 200.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_f1ej7"]
+curve = SubResource("Curve_qfm1y")
+
+[sub_resource type="Curve" id="Curve_fulsm"]
+_limits = [-200.0, 200.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_oprun"]
+curve = SubResource("Curve_fulsm")
+
+[sub_resource type="Curve" id="Curve_a8ls1"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.6639, 0.921348), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_qfm1y"]
+curve = SubResource("Curve_a8ls1")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fulsm"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 83.44
+angle_min = -90.0
+angle_max = 90.0
+angle_curve = SubResource("CurveTexture_jej6c")
+direction = Vector3(0, 0, 0)
+spread = 180.0
+initial_velocity_min = 89.61
+initial_velocity_max = 146.96
+gravity = Vector3(0, 0, 0)
+linear_accel_curve = SubResource("CurveTexture_f1ej7")
+radial_accel_curve = SubResource("CurveTexture_oprun")
+scale_min = 0.0
+scale_max = 1.55
+scale_curve = SubResource("CurveTexture_qfm1y")
+turbulence_influence_max = 0.114
+turbulence_initial_displacement_min = 1.49012e-06
+turbulence_initial_displacement_max = 1.49012e-06
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fulsm"]
+bg_color = Color(0.294277, 0.326288, 0.358314, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.901961, 0.905882, 0.909804, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+corner_detail = 20
+shadow_size = 1
+shadow_offset = Vector2(0.5, 0.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4r5pv"]
+bg_color = Color(0.0739296, 0.0864633, 0.0989934, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.901961, 0.905882, 0.909804, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+corner_detail = 20
+shadow_size = 1
+shadow_offset = Vector2(0.5, 0.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_60mlk"]
+bg_color = Color(0.192157, 0.215686, 0.239216, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.901961, 0.905882, 0.909804, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+corner_detail = 20
+shadow_size = 1
+shadow_offset = Vector2(0.5, 0.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i4ail"]
+bg_color = Color(0.952389, 0.208835, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a38lo"]
+bg_color = Color(0.207843, 0.517647, 0, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3v2ag"]
+radius = 26.5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jej6c"]
+radius = 28.22
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fjrip"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_onrkg")
+take_damage_sound = ExtResource("2_4r5pv")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Debug" type="VBoxContainer" parent="UI"]
+visible = false
+offset_left = 293.0
+offset_top = 2.0
+offset_right = 333.0
+offset_bottom = 79.0
+
+[node name="MightSt" type="Label" parent="UI/Debug"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "m"
+
+[node name="GrowthSt" type="Label" parent="UI/Debug"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "g"
+
+[node name="SpeedSt" type="Label" parent="UI/Debug"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "s"
+
+[node name="Gold" type="HBoxContainer" parent="UI"]
+unique_name_in_owner = true
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -121.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="TextureRect" type="TextureRect" parent="UI/Gold"]
+custom_minimum_size = Vector2(40.155, 0)
+layout_mode = 2
+texture = ExtResource("2_a8ls1")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="UI/Gold"]
+layout_mode = 2
+text = "0"
+
+[node name="XP" type="TextureProgressBar" parent="UI"]
+unique_name_in_owner = true
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -57.0
+offset_right = 700.0
+offset_bottom = 13.0
+grow_vertical = 0
+scale = Vector2(1.645, 0.438)
+max_value = 10.0
+texture_under = ExtResource("2_fjrip")
+texture_over = ExtResource("3_smehm")
+texture_progress = ExtResource("4_ur7pv")
+
+[node name="Level" type="Label" parent="UI/XP"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1.21581
+offset_top = -100.457
+offset_right = 89.2158
+offset_bottom = -36.4566
+scale = Vector2(0.5, 1.5)
+theme_override_font_sizes/font_size = 46
+text = "Lv.1"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Darken" type="ColorRect" parent="UI"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.263
+offset_top = -324.36
+offset_right = 576.263
+offset_bottom = 324.36
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.4)
+
+[node name="Particle" type="GPUParticles2D" parent="UI"]
+process_mode = 3
+visible = false
+position = Vector2(574, 322)
+amount = 300
+texture = ExtResource("5_y4r1p")
+lifetime = 3.37
+process_material = SubResource("ParticleProcessMaterial_fulsm")
+
+[node name="Panel" type="NinePatchRect" parent="UI"]
+process_mode = 3
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -266.0
+offset_top = -145.5
+offset_right = 266.0
+offset_bottom = 145.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_d2wvv")
+region_rect = Rect2(0.0367432, -0.041543, 35.9301, 35.9301)
+patch_margin_left = 7
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="Label" type="Label" parent="UI/Panel"]
+layout_mode = 0
+offset_left = 171.0
+offset_top = -62.5
+offset_right = 347.0
+offset_bottom = -7.5
+theme_override_font_sizes/font_size = 40
+text = "Level Up!"
+
+[node name="Weapons" type="HBoxContainer" parent="UI"]
+offset_right = 260.0
+offset_bottom = 40.0
+
+[node name="Slot" parent="UI/Weapons" instance=ExtResource("2_hqtel")]
+layout_mode = 2
+item = ExtResource("3_sweqy")
+
+[node name="Slot2" parent="UI/Weapons" instance=ExtResource("2_hqtel")]
+layout_mode = 2
+
+[node name="Slot3" parent="UI/Weapons" instance=ExtResource("2_hqtel")]
+layout_mode = 2
+
+[node name="Slot4" parent="UI/Weapons" instance=ExtResource("2_hqtel")]
+layout_mode = 2
+
+[node name="Slot5" parent="UI/Weapons" instance=ExtResource("2_hqtel")]
+layout_mode = 2
+
+[node name="Slot6" parent="UI/Weapons" instance=ExtResource("2_hqtel")]
+layout_mode = 2
+
+[node name="PassiveItems" type="HBoxContainer" parent="UI"]
+offset_top = 47.0
+offset_right = 231.0
+offset_bottom = 90.0
+
+[node name="PassiveSlot" parent="UI/PassiveItems" instance=ExtResource("9_d2wvv")]
+layout_mode = 2
+
+[node name="PassiveSlot2" parent="UI/PassiveItems" instance=ExtResource("9_d2wvv")]
+layout_mode = 2
+
+[node name="PassiveSlot3" parent="UI/PassiveItems" instance=ExtResource("9_d2wvv")]
+layout_mode = 2
+
+[node name="PassiveSlot4" parent="UI/PassiveItems" instance=ExtResource("9_d2wvv")]
+layout_mode = 2
+
+[node name="PassiveSlot5" parent="UI/PassiveItems" instance=ExtResource("9_d2wvv")]
+layout_mode = 2
+
+[node name="Options" type="VBoxContainer" parent="UI" node_paths=PackedStringArray("weapons", "passive_items", "particles", "panel", "bg")]
+unique_name_in_owner = true
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_smehm")
+weapons = NodePath("../Weapons")
+passive_items = NodePath("../PassiveItems")
+particles = NodePath("../Particle")
+panel = NodePath("../Panel")
+bg = NodePath("../Darken")
+
+[node name="Chest" type="NinePatchRect" parent="UI"]
+process_mode = 3
+visible = false
+custom_minimum_size = Vector2(300, 200)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_jej6c")
+patch_margin_left = 14
+patch_margin_top = 15
+patch_margin_right = 14
+patch_margin_bottom = 14
+script = ExtResource("12_oprun")
+
+[node name="Box" type="Sprite2D" parent="UI/Chest"]
+position = Vector2(150, 99)
+texture = ExtResource("12_jej6c")
+
+[node name="DebugExplosion" type="Sprite2D" parent="UI/Chest"]
+visible = false
+position = Vector2(153.139, 103.806)
+scale = Vector2(2.306, 2.306)
+texture = ExtResource("14_a8ls1")
+
+[node name="Explosion" type="Sprite2D" parent="UI/Chest"]
+position = Vector2(149, 101)
+scale = Vector2(0.0277777, 0.0277776)
+texture = ExtResource("14_a8ls1")
+
+[node name="Rewards" type="Control" parent="UI/Chest"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="PanelContainer" parent="UI/Chest/Rewards"]
+visible = false
+layout_mode = 0
+offset_left = 193.0
+offset_top = 37.0
+offset_right = 233.0
+offset_bottom = 77.0
+
+[node name="TextureRect" type="TextureRect" parent="UI/Chest/Rewards/TextureRect"]
+layout_mode = 2
+
+[node name="TextureRect2" type="PanelContainer" parent="UI/Chest/Rewards"]
+visible = false
+layout_mode = 0
+offset_left = 87.0
+offset_top = 41.0
+offset_right = 127.0
+offset_bottom = 81.0
+
+[node name="TextureRect" type="TextureRect" parent="UI/Chest/Rewards/TextureRect2"]
+layout_mode = 2
+
+[node name="TextureRect3" type="PanelContainer" parent="UI/Chest/Rewards"]
+visible = false
+layout_mode = 0
+offset_left = 140.0
+offset_top = 67.0
+offset_right = 180.0
+offset_bottom = 107.0
+
+[node name="TextureRect" type="TextureRect" parent="UI/Chest/Rewards/TextureRect3"]
+layout_mode = 2
+
+[node name="TextureRect4" type="PanelContainer" parent="UI/Chest/Rewards"]
+visible = false
+layout_mode = 0
+offset_left = 200.0
+offset_top = 100.0
+offset_right = 240.0
+offset_bottom = 140.0
+
+[node name="TextureRect" type="TextureRect" parent="UI/Chest/Rewards/TextureRect4"]
+layout_mode = 2
+
+[node name="TextureRect5" type="PanelContainer" parent="UI/Chest/Rewards"]
+visible = false
+layout_mode = 0
+offset_left = 87.0
+offset_top = 103.0
+offset_right = 127.0
+offset_bottom = 143.0
+
+[node name="TextureRect" type="TextureRect" parent="UI/Chest/Rewards/TextureRect5"]
+layout_mode = 2
+
+[node name="Close" type="Button" parent="UI/Chest"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -25.0
+offset_top = -45.0
+offset_right = 25.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/hover = SubResource("StyleBoxFlat_fulsm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4r5pv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_60mlk")
+text = "Close"
+
+[node name="toMainMenu" type="Button" parent="UI"]
+unique_name_in_owner = true
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.5
+offset_top = -15.5
+offset_right = 78.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Back to Main Menu"
+script = ExtResource("18_4r5pv")
+music_bgm = ExtResource("17_fulsm")
+
+[node name="GameOver" type="Label" parent="UI/toMainMenu"]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -119.0
+offset_right = 175.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 61
+text = "GAME OVER"
+
+[node name="Paused" type="Label" parent="UI/toMainMenu"]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -117.5
+offset_top = -117.0
+offset_right = 117.5
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 61
+text = "PAUSED"
+
+[node name="NewRecord" type="Label" parent="UI/toMainMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.5
+offset_top = -164.0
+offset_right = 73.5
+offset_bottom = -115.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "TIME RECORD:
+"
+horizontal_alignment = 1
+
+[node name="Health" type="ProgressBar" parent="UI"]
+unique_name_in_owner = true
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_i4ail")
+theme_override_styles/fill = SubResource("StyleBoxFlat_a38lo")
+value = 100.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.445, 1.445)
+texture = ExtResource("11_d2wvv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3v2ag")
+
+[node name="SelfDamage" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="Collision" type="CollisionShape2D" parent="SelfDamage"]
+unique_name_in_owner = true
+shape = SubResource("CircleShape2D_jej6c")
+debug_color = Color(0.992379, 0.0818757, 5.77569e-07, 0.42)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="MagnetArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="Magnet" type="CollisionShape2D" parent="MagnetArea"]
+unique_name_in_owner = true
+scale = Vector2(10, 10)
+shape = SubResource("CircleShape2D_fjrip")
+debug_color = Color(0.911332, 0.0405484, 0.712537, 0.42)
+
+[connection signal="pressed" from="UI/Chest/Close" to="UI/Chest" method="_on_close_pressed"]
+[connection signal="pressed" from="UI/toMainMenu" to="UI/toMainMenu" method="_on_pressed"]
+[connection signal="body_entered" from="SelfDamage" to="." method="_on_self_damage_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="MagnetArea" to="." method="_on_magnet_area_entered"]

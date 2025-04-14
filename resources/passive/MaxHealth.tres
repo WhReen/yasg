@@ -1,0 +1,54 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://bu2wsq0qu6gti"]
+
+[ext_resource type="Script" uid="uid://cv2bxxblpdgkw" path="res://scripts/PassiveItem.gd" id="1_mr71s"]
+[ext_resource type="Texture2D" uid="uid://dhyscrtrs5lpm" path="res://assets/healthUpgrade.svg" id="2_fdwf6"]
+[ext_resource type="Script" uid="uid://cau45jdiwfmt4" path="res://scripts/Stats.gd" id="3_ohc6b"]
+
+[sub_resource type="Resource" id="Resource_im2kp"]
+script = ExtResource("3_ohc6b")
+description = "Increase health"
+max_health = 25.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+metadata/_custom_type_script = "uid://cau45jdiwfmt4"
+
+[sub_resource type="Resource" id="Resource_bu63m"]
+script = ExtResource("3_ohc6b")
+description = "Increase health more"
+max_health = 50.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+metadata/_custom_type_script = "uid://cau45jdiwfmt4"
+
+[sub_resource type="Resource" id="Resource_liprc"]
+script = ExtResource("3_ohc6b")
+description = "Become a very healthy individual!"
+max_health = 200.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+metadata/_custom_type_script = "uid://cau45jdiwfmt4"
+
+[resource]
+script = ExtResource("1_mr71s")
+upgrades = Array[ExtResource("3_ohc6b")]([SubResource("Resource_im2kp"), SubResource("Resource_bu63m"), SubResource("Resource_liprc")])
+title = "Max Health"
+texture = ExtResource("2_fdwf6")
+metadata/_custom_type_script = "uid://cv2bxxblpdgkw"

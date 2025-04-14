@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://brg7g1xjiyj2i"]
+
+[ext_resource type="Texture2D" uid="uid://ckclggplg06ve" path="res://assets/clover.svg" id="1_vq4d5"]
+[ext_resource type="Script" uid="uid://cv2bxxblpdgkw" path="res://scripts/PassiveItem.gd" id="2_2ocx6"]
+[ext_resource type="Script" uid="uid://cau45jdiwfmt4" path="res://scripts/Stats.gd" id="3_uwdcf"]
+
+[sub_resource type="Resource" id="Resource_vq4d5"]
+script = ExtResource("3_uwdcf")
+description = "Add a bit of luck"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.2
+metadata/_custom_type_script = "uid://cau45jdiwfmt4"
+
+[sub_resource type="Resource" id="Resource_2ocx6"]
+script = ExtResource("3_uwdcf")
+description = "Add some luck"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.3
+metadata/_custom_type_script = "uid://cau45jdiwfmt4"
+
+[sub_resource type="Resource" id="Resource_uwdcf"]
+script = ExtResource("3_uwdcf")
+description = "DING DING DING"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.5
+metadata/_custom_type_script = "uid://cau45jdiwfmt4"
+
+[resource]
+script = ExtResource("2_2ocx6")
+upgrades = Array[ExtResource("3_uwdcf")]([SubResource("Resource_vq4d5"), SubResource("Resource_2ocx6"), SubResource("Resource_uwdcf")])
+title = "Luck"
+texture = ExtResource("1_vq4d5")
+icon = ExtResource("1_vq4d5")
+metadata/_custom_type_script = "uid://cv2bxxblpdgkw"

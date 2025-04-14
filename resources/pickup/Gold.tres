@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Gold" load_steps=4 format=3 uid="uid://vjghc24s7i5n"]
+
+[ext_resource type="Texture2D" uid="uid://caqsd5e8yqqec" path="res://assets/coin.svg" id="1_jj03r"]
+[ext_resource type="Script" uid="uid://cqan8kqj15s6g" path="res://scripts/Gold.gd" id="2_k7bwk"]
+[ext_resource type="AudioStream" uid="uid://4puacw5v84eq" path="res://assets/ding.wav" id="3_k7bwk"]
+
+[resource]
+script = ExtResource("2_k7bwk")
+gold = 5
+title = "Gold"
+icon = ExtResource("1_jj03r")
+rescale = Vector2(0, 0)
+description = "Moneyyy"
+sound = ExtResource("3_k7bwk")
+pitchRandom = false
+weight = 3.0
+metadata/_custom_type_script = "uid://cqan8kqj15s6g"

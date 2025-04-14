@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://vyc75g87rnlt"]
+
+[ext_resource type="Script" uid="uid://b661ij5nr4h1s" path="res://scripts/enemy.gd" id="1_md0e3"]
+[ext_resource type="Texture2D" uid="uid://2nmft44kfvxu" path="res://assets/poo.svg" id="2_4ra3w"]
+[ext_resource type="AudioStream" uid="uid://cx6nextq4c41w" path="res://assets/hitmarker.wav" id="2_5uy6h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iifgy"]
+radius = 12.1655
+
+[node name="Enemy" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_md0e3")
+damagesfx = ExtResource("2_5uy6h")
+
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["Enemy"]]
+texture = ExtResource("2_4ra3w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_iifgy")

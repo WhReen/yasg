@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://d15u7r720phtg"]
+
+[ext_resource type="Texture2D" uid="uid://jowbxxe7pka" path="res://assets/fire.svg" id="1_cxwls"]
+[ext_resource type="Script" uid="uid://3wjllikoo7d4" path="res://scripts/option_slot.gd" id="2_je35h"]
+[ext_resource type="Texture2D" uid="uid://ba87v5wxqhsur" path="res://assets/border2.png" id="3_je35h"]
+
+[node name="OptionSlot" type="TextureButton"]
+custom_minimum_size = Vector2(309.725, 40)
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 311.725
+offset_bottom = 41.0
+mouse_filter = 1
+texture_normal = ExtResource("1_cxwls")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("2_je35h")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 45.0
+offset_top = 8.0
+offset_right = 76.0
+offset_bottom = 31.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Lv.2"
+
+[node name="Description" type="Label" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(223, 0)
+layout_mode = 2
+offset_left = 80.0
+offset_top = 1.0
+offset_right = 303.0
+offset_bottom = 40.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 11
+text = "Description "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+max_lines_visible = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+show_behind_parent = true
+custom_minimum_size = Vector2(315, 45.065)
+layout_mode = 0
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 312.0
+offset_bottom = 42.065
+texture = ExtResource("3_je35h")
+region_rect = Rect2(9.42461, 9.04156, 52.8785, 53.7778)
+patch_margin_left = 6
+patch_margin_top = 8
+patch_margin_right = 6
+patch_margin_bottom = 8
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

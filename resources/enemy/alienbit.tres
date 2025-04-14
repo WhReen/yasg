@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://bnkqw1r54ai45"]
+
+[ext_resource type="Script" uid="uid://8b50xovumky6" path="res://scripts/PickupResource.gd" id="1_myqrl"]
+[ext_resource type="Texture2D" uid="uid://dmgfdlcrsg18b" path="res://assets/bitalien.svg" id="2_lykw2"]
+[ext_resource type="Resource" uid="uid://c8yim57aunage" path="res://resources/pickup/midxp.tres" id="2_myqrl"]
+[ext_resource type="Script" uid="uid://dml04y8lmcrfq" path="res://scripts/EnemyType.gd" id="3_7uwqe"]
+
+[resource]
+script = ExtResource("3_7uwqe")
+title = "Alien-Bit"
+texture = ExtResource("2_lykw2")
+health = 9.0
+damage = 11.0
+drops = Array[ExtResource("1_myqrl")]([ExtResource("2_myqrl")])
+metadata/_custom_type_script = "uid://dml04y8lmcrfq"

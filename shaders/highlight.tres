@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bd6po4wr63lyw"]
+
+[ext_resource type="Shader" uid="uid://dvqb8t6146711" path="res://shaders/highlight2d.gdshader" id="1_tdt5j"]
+
+[resource]
+shader = ExtResource("1_tdt5j")
+shader_parameter/size_effect = 0.4
+shader_parameter/speed = 1.0
+shader_parameter/highlight_strength = 0.6
+shader_parameter/color_mode_toggle = false
+shader_parameter/is_horizontal = false

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://cvweamr76nukr"]
+
+[ext_resource type="Script" uid="uid://8b50xovumky6" path="res://scripts/PickupResource.gd" id="1_e6bhm"]
+[ext_resource type="Texture2D" uid="uid://dr2xsq6pyj40g" path="res://assets/skull.svg" id="2_c5bwm"]
+[ext_resource type="Resource" uid="uid://c8yim57aunage" path="res://resources/pickup/midxp.tres" id="2_e6bhm"]
+[ext_resource type="Script" uid="uid://dml04y8lmcrfq" path="res://scripts/EnemyType.gd" id="3_k0nn5"]
+
+[resource]
+script = ExtResource("3_k0nn5")
+title = "Skull"
+texture = ExtResource("2_c5bwm")
+health = 16.0
+damage = 17.0
+drops = Array[ExtResource("1_e6bhm")]([ExtResource("2_e6bhm")])
+metadata/_custom_type_script = "uid://dml04y8lmcrfq"

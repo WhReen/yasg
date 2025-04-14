@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Health" load_steps=4 format=3 uid="uid://d2fuj58pmo5l3"]
+
+[ext_resource type="Texture2D" uid="uid://c484ummvsjg7m" path="res://assets/salad.svg" id="1_yqxsa"]
+[ext_resource type="Script" uid="uid://deuxl8msbsr7p" path="res://Health.gd" id="2_jgft2"]
+[ext_resource type="AudioStream" uid="uid://ckd5lp51dx143" path="res://assets/eat.wav" id="3_jgft2"]
+
+[resource]
+script = ExtResource("2_jgft2")
+amount = 20.0
+title = "Salad"
+icon = ExtResource("1_yqxsa")
+rescale = Vector2(0, 0)
+description = "Recover 20% of health"
+sound = ExtResource("3_jgft2")
+pitchRandom = false
+weight = 2.0
+metadata/_custom_type_script = "uid://deuxl8msbsr7p"

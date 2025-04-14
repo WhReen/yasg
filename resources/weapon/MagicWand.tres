@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="Circular" load_steps=11 format=3 uid="uid://bd0jh3n4xlbop"]
+
+[ext_resource type="PackedScene" uid="uid://chlynv2aotua6" path="res://scenes/projectile.tscn" id="1_ghmio"]
+[ext_resource type="Script" uid="uid://dieirc0bc0556" path="res://scripts/Circular.gd" id="2_4tf7d"]
+[ext_resource type="Texture2D" uid="uid://duyvkxf7d4fq8" path="res://assets/flyingwand.svg" id="3_cu18v"]
+[ext_resource type="Script" uid="uid://0uoe6tj50dkr" path="res://scripts/Upgrade.gd" id="4_ee83c"]
+[ext_resource type="Script" uid="uid://cskrq8lxti4bm" path="res://CircularUpgrade.gd" id="5_4tf7d"]
+
+[sub_resource type="Resource" id="Resource_cu18v"]
+script = ExtResource("5_4tf7d")
+angular_speed = 0.0
+radius = 0
+amount = 1.0
+damage = 0.0
+cooldown = 0.0
+description = "Add one more wand"
+metadata/_custom_type_script = "uid://cskrq8lxti4bm"
+
+[sub_resource type="Resource" id="Resource_ee83c"]
+script = ExtResource("5_4tf7d")
+angular_speed = 0.0
+radius = 0
+amount = 1.0
+damage = 2.0
+cooldown = 0.0
+description = "Add more wand and damage"
+metadata/_custom_type_script = "uid://cskrq8lxti4bm"
+
+[sub_resource type="Resource" id="Resource_bcjid"]
+script = ExtResource("5_4tf7d")
+angular_speed = 90.0
+radius = 0
+amount = 0.0
+damage = 2.0
+cooldown = 0.0
+description = "Increase spin speed and damage"
+metadata/_custom_type_script = "uid://cskrq8lxti4bm"
+
+[sub_resource type="Resource" id="Resource_k2jgj"]
+script = ExtResource("5_4tf7d")
+angular_speed = 0.0
+radius = 40
+amount = 1.0
+damage = 0.0
+cooldown = 0.0
+description = "Increase radius and wand amount"
+metadata/_custom_type_script = "uid://cskrq8lxti4bm"
+
+[sub_resource type="Resource" id="Resource_3p8x5"]
+script = ExtResource("5_4tf7d")
+angular_speed = 90.0
+radius = 40
+amount = 1.0
+damage = 2.0
+cooldown = 0.0
+description = "You spin me right round baby right round"
+metadata/_custom_type_script = "uid://cskrq8lxti4bm"
+
+[resource]
+script = ExtResource("2_4tf7d")
+angular_speed = 180
+radius = 75
+amount = 2
+damage = 2.0
+cooldown = 2.0
+speed = 0.0
+projectile_node = ExtResource("1_ghmio")
+upgrades = Array[ExtResource("4_ee83c")]([SubResource("Resource_cu18v"), SubResource("Resource_ee83c"), SubResource("Resource_bcjid"), SubResource("Resource_k2jgj"), SubResource("Resource_3p8x5")])
+pitchRandom = false
+title = "Magic Wand"
+texture = ExtResource("3_cu18v")
+icon = ExtResource("3_cu18v")
+metadata/_custom_type_script = "uid://dieirc0bc0556"

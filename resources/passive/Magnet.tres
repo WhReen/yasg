@@ -1,0 +1,54 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://b3p80mqgxn37t"]
+
+[ext_resource type="Script" uid="uid://cv2bxxblpdgkw" path="res://scripts/PassiveItem.gd" id="1_8nmhg"]
+[ext_resource type="Texture2D" uid="uid://b86aypdvvuat2" path="res://assets/magnet.svg" id="2_3ob5i"]
+[ext_resource type="Script" uid="uid://cau45jdiwfmt4" path="res://scripts/Stats.gd" id="3_0wko0"]
+
+[sub_resource type="Resource" id="Resource_geo5v"]
+script = ExtResource("3_0wko0")
+description = "Increase pull radius"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 5.0
+growth = 0.0
+luck = 0.0
+metadata/_custom_type_script = "uid://cau45jdiwfmt4"
+
+[sub_resource type="Resource" id="Resource_rk71d"]
+script = ExtResource("3_0wko0")
+description = "Further increase pull radius"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 10.0
+growth = 0.0
+luck = 0.0
+metadata/_custom_type_script = "uid://cau45jdiwfmt4"
+
+[sub_resource type="Resource" id="Resource_d0ux6"]
+script = ExtResource("3_0wko0")
+description = "Pull everything"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 30.0
+growth = 0.0
+luck = 0.0
+metadata/_custom_type_script = "uid://cau45jdiwfmt4"
+
+[resource]
+script = ExtResource("1_8nmhg")
+upgrades = Array[ExtResource("3_0wko0")]([SubResource("Resource_geo5v"), SubResource("Resource_rk71d"), SubResource("Resource_d0ux6")])
+title = "Magnet"
+texture = ExtResource("2_3ob5i")
+metadata/_custom_type_script = "uid://cv2bxxblpdgkw"

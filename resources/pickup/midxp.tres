@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Gem" load_steps=4 format=3 uid="uid://c8yim57aunage"]
+
+[ext_resource type="Texture2D" uid="uid://cbu30dkenum4q" path="res://assets/yellowheart.svg" id="1_ui4fq"]
+[ext_resource type="Script" uid="uid://c26qktl4n21iu" path="res://resources/pickup/Gem.gd" id="2_b51d0"]
+[ext_resource type="AudioStream" uid="uid://chvqmy6b08v0l" path="res://assets/pop.wav" id="3_b51d0"]
+
+[resource]
+script = ExtResource("2_b51d0")
+XP = 5.0
+title = "midXp"
+icon = ExtResource("1_ui4fq")
+rescale = Vector2(0, 0)
+description = "Gain moderate xp"
+sound = ExtResource("3_b51d0")
+pitchRandom = true
+weight = 0.0
+metadata/_custom_type_script = "uid://c26qktl4n21iu"
