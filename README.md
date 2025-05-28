@@ -1,2 +1,3 @@
-uasrevision branch for the minimum requirement \n
+uasrevision branch for the minimum requirement
+
 initial branch for the before uasrevision branch
