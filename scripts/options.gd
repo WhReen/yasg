@@ -23,6 +23,12 @@ func _ready():
 	bg.hide()
 	get_all_item()
 	
+func _process(delta: float) -> void:
+	if ready:
+		%XP.scale = Vector2(get_viewport().get_visible_rect().size.x/700,%XP.scale.y)
+		print(str(%XP.scale) + " and " + str(%XP.size))
+		particles.position = get_viewport().get_visible_rect().size/2
+	
 func close_option():
 	hide()
 	particles.set_emitting(false)

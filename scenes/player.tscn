@@ -184,50 +184,53 @@ text = "0"
 
 [node name="XP" type="TextureProgressBar" parent="UI"]
 unique_name_in_owner = true
-anchors_preset = 2
+anchors_preset = 12
 anchor_top = 1.0
+anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = -57.0
-offset_right = 700.0
+offset_right = -452.0
 offset_bottom = 13.0
+grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(1.645, 0.438)
+size_flags_horizontal = 3
+size_flags_vertical = 3
 max_value = 10.0
 texture_under = ExtResource("2_fjrip")
 texture_over = ExtResource("3_smehm")
 texture_progress = ExtResource("4_ur7pv")
 
-[node name="Level" type="Label" parent="UI/XP"]
+[node name="Level" type="Label" parent="UI"]
 unique_name_in_owner = true
-layout_mode = 0
-offset_left = 1.21581
-offset_top = -100.457
-offset_right = 89.2158
-offset_bottom = -36.4566
-scale = Vector2(0.5, 1.5)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -23.0
+offset_top = -54.0
+offset_right = 65.0
+offset_bottom = 10.0004
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.440002, 0.36)
+size_flags_vertical = 8
 theme_override_font_sizes/font_size = 46
 text = "Lv.1"
 horizontal_alignment = 1
 vertical_alignment = 2
 
 [node name="Darken" type="ColorRect" parent="UI"]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -576.263
-offset_top = -324.36
-offset_right = 576.263
-offset_bottom = 324.36
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.4)
 
 [node name="Particle" type="GPUParticles2D" parent="UI"]
 process_mode = 3
-visible = false
 position = Vector2(574, 322)
 amount = 300
 texture = ExtResource("5_y4r1p")

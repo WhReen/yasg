@@ -502,21 +502,29 @@ theme_override_font_sizes/font_size = 36
 text = "Back to Menu"
 
 [node name="Gold" type="Label" parent="UpgradeWindow"]
-layout_mode = 0
-offset_left = 1053.0
-offset_top = 32.0
-offset_right = 1124.0
-offset_bottom = 76.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -87.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 60.0
+grow_horizontal = 0
 theme_override_font_sizes/font_size = 31
 text = "0"
 script = ExtResource("5_8ln24")
 
 [node name="TextureRect" type="TextureRect" parent="UpgradeWindow"]
-layout_mode = 0
-offset_left = 992.0
-offset_top = 21.0
-offset_right = 1064.0
-offset_bottom = 93.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -146.0
+offset_top = 14.0
+offset_right = -74.0
+offset_bottom = 86.0
+grow_horizontal = 0
 scale = Vector2(0.56, 0.559999)
 texture = ExtResource("6_rtw2f")
 
@@ -537,11 +545,18 @@ offset_bottom = 99.0
 texture = ExtResource("6_rtw2f")
 
 [node name="Delete" type="Button" parent="UpgradeWindow"]
-layout_mode = 0
-offset_left = 996.0
-offset_top = 598.0
-offset_right = 1127.0
-offset_bottom = 626.0
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -146.0
+offset_top = -44.0
+offset_right = -15.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
 text = "Delete Save Data"
 
 [node name="ConfirmDelete" type="Button" parent="UpgradeWindow/Delete"]
@@ -565,11 +580,15 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1ajci")
 
 [node name="TextureRect" type="TextureRect" parent="Menu"]
-layout_mode = 0
-offset_left = 349.0
-offset_top = 19.0
-offset_right = 821.0
-offset_bottom = 393.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -225.0
+offset_top = 14.0
+offset_right = 247.0
+offset_bottom = 388.0
+grow_horizontal = 2
 texture = ExtResource("13_1ajci")
 
 [node name="Start" type="Button" parent="Menu"]
